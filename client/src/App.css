@@ -138,6 +138,10 @@ label {
 
 }
 
+.button:hover {
+  cursor: pointer;
+}
+
 @media (min-width: 900px) {
     .button {
         font-size: var(--ff-primary);

@@ -1,24 +1,43 @@
 import './App.css';
+import {useState} from 'react';
+import Button from './components/Button';
+import Header from './components/header';
 
 function App() {
+
+  const [title, setTitle] = useState('');
+  const [artist, setArtist] = useState('');
+
+  
   return (
     <div className="App">
       
       <div className="container">
-        <i className="logo fa-solid fa-record-vinyl"></i>
-        <h1 className="title">My<span className="text-primary">Vinyl</span>Stash</h1>
+        <Header text="MyVinylStash"/>
       </div>
       <div className="container-form">
         <form id="vinyl-form">
             <div className="form-group">
-                <label for="title">Title</label>
-                <input type="text" id="title" className="form-control"/>
+                <label htmlFor="title">Title</label>
+                <input 
+                  type="text" 
+                  id="title" 
+                  className="form-control" 
+                  onChange={(event) => {
+                    setTitle(event.target.value)
+                  }}/>
             </div>
             <div className="form-group">
-                <label for="Artist">Artist</label>
-                <input type="text" id="artist" className="form-control"/>
+                <label htmlFor="Artist">Artist</label>
+                <input 
+                  type="text" 
+                  id="artist" 
+                  className="form-control"
+                  onChange={(event) => {
+                    setArtist(event.target.value)
+                  }}/>
             </div>
-            <input type="submit" value="Add Record" className="button"/>
+            <Button text="Add a Record"/>
         </form>
         <table className="table">
             <thead>
