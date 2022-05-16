@@ -1,12 +1,12 @@
 import Record from "./Record";
 
 
-const Records = ( {records} ) => {
+const Records = ( {records, onRemove} ) => {
 
     return (
         <>
             {records.map((record) => (
-            <Record key={record.id} record={record}/>))}
+            <Record key={record.id} record={record} onRemove = {onRemove}/>))}
         </>
     )
 };

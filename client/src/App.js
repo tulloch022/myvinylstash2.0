@@ -23,9 +23,19 @@ function App() {
     }
 ])
 
+
+//Remove record
+
+  const removeRecord = (id) => {
+    setRecords(records.filter((record) => record.id !== id))
+  }
+
+
+
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
 
+  
   const onClick = (e) => {
     alert(e);
   }
@@ -65,14 +75,10 @@ function App() {
                 <tr>
                     <th id="top">Title</th>
                     <th id="top">Artist</th>
-                    <th id="top"> </th>
                 </tr>
             </thead>
-            <tbody id="record-list">
-
-            </tbody>
         </table>
-        <Records records={records}/>
+        <Records records={records} onRemove={removeRecord}/>
        </div>
 
     </div>

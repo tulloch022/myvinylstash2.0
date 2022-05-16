@@ -1,7 +1,7 @@
-const Record = ({ record }) => {
+const Record = ({ record, onRemove }) => {
     return (
         <div className='record'>
-            <h3>{record.title} - {record.artist}</h3>
+            <h3>{record.title} - {record.artist} <p onClick={() => onRemove(record.id)}>Remove</p></h3>
         </div>
     )
 }

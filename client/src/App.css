@@ -182,3 +182,13 @@ h3 {
   padding: .5em;
   border: 1px solid black;
 }
+
+
+p {
+  font-size: .6em;
+  color: rgb(57, 150, 207);
+}
+
+p:hover {
+  cursor: pointer;
+}
