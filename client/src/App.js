@@ -12,11 +12,11 @@ function App() {
         <form id="vinyl-form">
             <div className="form-group">
                 <label for="title">Title</label>
-                <input type="text" id="title" class="form-control"/>
+                <input type="text" id="title" className="form-control"/>
             </div>
             <div className="form-group">
                 <label for="Artist">Artist</label>
-                <input type="text" id="artist" class="form-control"/>
+                <input type="text" id="artist" className="form-control"/>
             </div>
             <input type="submit" value="Add Record" className="button"/>
         </form>
