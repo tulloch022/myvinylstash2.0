@@ -4,23 +4,23 @@ function App() {
   return (
     <div className="App">
       
-      <div class="container">
-        <i class="logo fa-solid fa-record-vinyl"></i>
-        <h1 class="title">My<span class="text-primary">Vinyl</span>Stash</h1>
-    </div>
-    <div class="container-form">
+      <div className="container">
+        <i className="logo fa-solid fa-record-vinyl"></i>
+        <h1 className="title">My<span className="text-primary">Vinyl</span>Stash</h1>
+      </div>
+      <div className="container-form">
         <form id="vinyl-form">
-            <div class="form-group">
+            <div className="form-group">
                 <label for="title">Title</label>
                 <input type="text" id="title" class="form-control"/>
             </div>
-            <div class="form-group">
+            <div className="form-group">
                 <label for="Artist">Artist</label>
                 <input type="text" id="artist" class="form-control"/>
             </div>
-            <input type="submit" value="Add Record" class="button"/>
+            <input type="submit" value="Add Record" className="button"/>
         </form>
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th id="top">Title</th>
@@ -32,10 +32,10 @@ function App() {
 
             </tbody>
         </table>
-    </div>
+       </div>
 
     </div>
-  );
-}
+  )
+};
 
 export default App;
