@@ -1,11 +1,10 @@
-const Button = ({text}) => {
+const Button = ({text, onClick}) => {
 
-    const onClick = (e) => {
-        console.log(e)
-    }
 
     return (
-        <button onClick={onClick} className="button">
+        <button 
+            onClick={onClick}
+            className="button">
             {text}
         </button>
     )

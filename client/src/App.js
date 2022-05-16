@@ -1,13 +1,34 @@
 import './App.css';
-import {useState} from 'react';
+import { useState } from 'react';
 import Button from './components/Button';
 import Header from './components/header';
+import Records from './components/records';
 
 function App() {
+  const [records, setRecords] = useState([
+    {
+        id: 1,
+        title: 'A Moment Apart',
+        artist: 'Odesza'
+    },
+    {
+        id: 2,
+        title: 'Everyday',
+        artist: 'Dave Matthews Band'
+    },
+    {
+        id: 3,
+        title: 'Continuum',
+        artist: 'John Mayer'
+    }
+])
 
   const [title, setTitle] = useState('');
   const [artist, setArtist] = useState('');
 
+  const onClick = (e) => {
+    alert(e);
+  }
   
   return (
     <div className="App">
@@ -37,7 +58,7 @@ function App() {
                     setArtist(event.target.value)
                   }}/>
             </div>
-            <Button text="Add a Record"/>
+            <Button onClick={onClick} text="Add a Record"/>
         </form>
         <table className="table">
             <thead>
@@ -51,6 +72,7 @@ function App() {
 
             </tbody>
         </table>
+        <Records records={records}/>
        </div>
 
     </div>
